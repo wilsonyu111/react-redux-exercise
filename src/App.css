@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 100%;
+  pointer-events: none;
+}
+
+.App-header {
+  height: 36px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+.App-main {
+  flex: 1;
+  background-color: #fdfdfd;
+  padding: 24px;
+}
+
+.groceryApp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.listSelection {
+  width: 30%;
+  padding: 20px;
+  text-align: left;
+}
+
+.listTable {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.addItemButton {
+  padding: 20px;
+  border-radius: 1px solid #d1d1d1;
+}
