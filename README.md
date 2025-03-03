@@ -36,12 +36,10 @@ After taking a look at the application, you have assesed that you need to comple
 
 ## Getting started
 
-1. Fork this Codesandbox and add your last name onto the end of the title
-2. Either continue writing in code sandbox or you can opt to connect it to your GitHub account and clone the repo to work locally
-3. If you run it locally... follow 4 - 6. If you elect to keep using Code sandbox, do your thing.
-4. run `npm i`
-5. run `npm start`
-6. open to http://localhost:3000/
+1. Clone the repo to work locally
+2. run `npm i`
+3. run `npm start`
+4. open to http://localhost:3000/
 
 ## Exercise Contraints
 
@@ -49,7 +47,7 @@ Use whatever resources you're most comfortable with to complete the assignment. 
 
 ## Completing the assignment
 
-When you're finished, be sure that you create a link and share the link with the individual who sent the link to you.
+When you're finished, be sure to push up the completed code to your github and provide a link to the individual who sent the link to you.
 
 In addition, keep it locally and then bring it into your interview. We'll walk through what you did and how you did it. Again don't be worried if you can't get everything working. Words on a screen aren't too important to us, we care more about the concepts and the ways that you went about solving the problems that you're presented with. Keep a mental note of the resources you used to accomplish these problems as we'll be asking you to talk through how you went about solving for something that you previously didn't understand.
 
