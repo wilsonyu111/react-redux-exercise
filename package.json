@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
-    "start": "concurrently \"vite --port 3000\" \"npm run json-server\"",
+    "start": "vite --port 3000",
     "json-server": "json-server --watch db/db.json --port 3001",
     "build": "tsc && vite build",
     "preview": "vite preview",

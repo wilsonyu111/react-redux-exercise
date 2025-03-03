@@ -1,10 +1,3 @@
-## Scripts
-
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
 # Cadent Front-End React + Redux Apptitude Exercise
 
 ## Summary
@@ -24,11 +17,15 @@ After taking a look at the application, you have assesed that you need to comple
 #### Tasks
 
 - Finish the **ListTable** component so that the items in the grocery list will display inside of a table
-- You'll need to fetch a list of initial inventory from the following api http://localhost:3001/groceries (via json-server) to populate the applications local store. This should be the only api call you make. All other data manipulation should be done in memory via Redux.
 - Add buttons within the table that will remove, select, and deselect and item from the list (you will need to write custom reducers and action creators for each of those actions).
 - Finish the **ListSelection** component so that when an item inside the table is clicked, it will display inside of that component.
 - Make sure that each component has at least one test written for it, and that it tests functionality of that component. (You may use any testing library you are comfortable with, jest is included).
-- Hooks are the wave of the future, implement a hook of your choice in this application.
+
+##### Bonus items
+
+- Implement a hook of your choice in this application.
+- Instead of using redux use React context.
+- Add search functionality.
 
 #### Helpful Hints & Constraints
 
@@ -36,7 +33,6 @@ After taking a look at the application, you have assesed that you need to comple
 - Use the container as your main hub for both data and actions and then see what you can pass to each of the components.
 - All of your Redux functionality is inside of the **grocerySlice** file. This file follows a pattern called ducks which groups all of related redux functionality into one file to avoid rework and segmentation.
 - **DO NOT** worry yourself with styling the components. If you feel compelled, go ahead, but you will not be assessed your style comprehension.
-- An original grocery list has been provided and hooked up to the container. Feel free to inspect console and view the list.
 
 ## Getting started
 

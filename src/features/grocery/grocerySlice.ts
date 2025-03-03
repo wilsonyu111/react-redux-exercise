@@ -15,7 +15,32 @@ interface ListState {
 }
 
 const initialState: ListState = {
-  list: [],
+  list: [
+    {
+      id: 66,
+      name: "Bananas",
+      category: "Fruit",
+      deliveryMethod: "Air",
+    },
+    {
+      id: 16,
+      name: "Whole Grain Bread",
+      category: "Grains",
+      deliveryMethod: "Air",
+    },
+    {
+      id: 100,
+      name: "Lettuce",
+      category: "Vegetable",
+      deliveryMethod: "Ground",
+    },
+    {
+      id: 10,
+      name: "Roasted Turkey",
+      category: "Deli",
+      deliveryMethod: "Ground",
+    },
+  ],
   isItemSelected: false,
   selectedItem: {
     id: 0,
