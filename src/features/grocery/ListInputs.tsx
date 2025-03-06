@@ -13,8 +13,12 @@ interface ListInputsProps {
 
 export const ListInputs: React.FC<ListInputsProps> = ({ addItem }) => {
   const createItem = () => {
+    let d = new Date()
+
     const item: Item = {
-      id: 10,
+      // this was hardcoded to 10 but this will cause key issue
+      // so I change it to use epoch time
+      id: d.getTime(),
       name: "Roasted Turkey",
       category: "Deli",
       deliveryMethod: "Ground",

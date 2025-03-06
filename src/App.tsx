@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="cadent-app-logo" alt="logo" />
         <h2>React Redux App</h2>{" "}
       </header>
       <main className="App-main">

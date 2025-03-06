@@ -59,18 +59,46 @@ export const grocerySlice = createSlice({
     },
     removeItem: (state, action: PayloadAction<number>) => {
       // Write a custom reducer that will remove an item from the list array
+      state.list = state.list.filter((item)=> (action.payload !== item.id));
+      if (action.payload === state.selectedItem.id){
+        state.isItemSelected = false;
+        state.selectedItem = {
+          id: 0,
+          name: "",
+          category: "",
+          deliveryMethod: "",
+        }
+      }
     },
     selectItem: (state, action: PayloadAction<number>) => {
       // Write a custom reducer that will select an item
+      let item = state.list.find(i => i.id === action.payload)
+      if (item !== null && item !== undefined){
+        state.selectedItem = {
+          id: item.id,
+          name: item.name,
+          category: item.category,
+          deliveryMethod: item.category
+        }
+        state.isItemSelected = true;
+      }
+
     },
     deselectItem: (state) => {
       // Write a customer reducer that will deselect an item
+      state.isItemSelected = false;
+      state.selectedItem = {
+        id: 0,
+        name: "",
+        category: "",
+        deliveryMethod: "",
+      }
     },
   },
 });
 
 // Export actions
-export const { addItem } = grocerySlice.actions;
+export const { addItem, removeItem, selectItem, deselectItem} = grocerySlice.actions;
 
 // Export reducer
 export default grocerySlice.reducer;

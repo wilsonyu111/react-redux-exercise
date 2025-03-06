@@ -7,6 +7,8 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import ListInputs from "./ListInputs"
 import ListSelection from "./ListSelection"
 import ListTable from "./ListTable"
+import SearchBar from "../search/SearchBar"
+import SearchSection from "../search/SearchSection"
 
 export const ListContainer: React.FC = () => {
   // ✅ Get groceryList from Redux state
@@ -22,6 +24,7 @@ export const ListContainer: React.FC = () => {
 
   return (
     <section className="groceryApp">
+      <div className="searchBar"><SearchSection/></div>
       <div className="listInputs">
         <ListInputs addItem={item => dispatch(addItem(item))} />
       </div>
