@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react"
 import SearchBar from "./SearchBar"
 
+// radio button passed to child via context
 export const SearchMode = createContext<string>("")
 
 const SearchSection: React.FC = () => {
@@ -15,6 +16,7 @@ const SearchSection: React.FC = () => {
 
   return (
     <div>
+      {/* passing to SearchBar child */}
       <SearchMode.Provider value={selectedOption}>
         <SearchBar />
       </SearchMode.Provider>
@@ -27,6 +29,7 @@ const SearchSection: React.FC = () => {
           justifyContent: "center",
         }}
       >
+        {/* only allow numeric searching, ID contain only numeric characters */}
         <div style={{ padding: "5px" }}>
           <input
             data-testid="id-radio-button"
@@ -40,7 +43,7 @@ const SearchSection: React.FC = () => {
           />
           <label htmlFor="radioById">ID</label>
         </div>
-
+        {/* only allow name searching */}
         <div style={{ padding: "5px" }}>
           <input
             data-testid="name-radio-button"

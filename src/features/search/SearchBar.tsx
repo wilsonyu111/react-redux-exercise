@@ -4,13 +4,22 @@ import { store } from "../../app/store"
 import { useDispatch } from "react-redux"
 import { selectItem } from "../grocery/grocerySlice"
 
+
+// since there wasn't any description of how the search bar should be implemented
+//  I choose to output the item info when if it exists in the redux state
+//  otherwise the show compoent will remain empty
 const SearchBar = () => {
+  // store the user input state
   const [searchVal, setSearchVal] = useState("")
+
+  // take the context variable from parent
   const searchMode = useContext(SearchMode)
   const dispatch = useDispatch()
+  // search mode is by default number
   let type = "number"
   let placeholder = "Search ID"
   const searchById = (id: number) => {
+    
     dispatch(selectItem(id))
     setSearchVal("")
   }

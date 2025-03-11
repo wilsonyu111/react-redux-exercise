@@ -7,8 +7,15 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import ListInputs from "./ListInputs"
 import ListSelection from "./ListSelection"
 import ListTable from "./ListTable"
-import SearchBar from "../search/SearchBar"
 import SearchSection from "../search/SearchSection"
+
+// custom hook
+function useCustomHook(groceryList:any ){
+  useEffect(() => {
+    // fetch data from API (localhost:3001/groceries) and set in redux.
+    console.log("groceryList", groceryList)
+  }, [groceryList])
+}
 
 export const ListContainer: React.FC = () => {
   // ✅ Get groceryList from Redux state
@@ -17,13 +24,10 @@ export const ListContainer: React.FC = () => {
   // ✅ Get dispatch function
   const dispatch = useAppDispatch()
 
-  useEffect(() => {
-    // fetch data from API (localhost:3001/groceries) and set in redux.
-    console.log("groceryList", groceryList)
-  }, [groceryList])
-
+  useCustomHook(groceryList)
   return (
     <section className="groceryApp">
+      {/* search bar */}
       <div className="searchBar"><SearchSection/></div>
       <div className="listInputs">
         <ListInputs addItem={item => dispatch(addItem(item))} />

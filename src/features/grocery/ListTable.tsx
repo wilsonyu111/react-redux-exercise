@@ -15,10 +15,14 @@ interface ItemRowProps {
   item: Item
 }
 
+// helper components that renders each row of the table
+// taking the item object and destructuring it
 export const ItemRow: React.FC<ItemRowProps> = ({ item }) => {
   const dispatch = useDispatch()
   const { id, name, category, deliveryMethod } = item
   return (
+    // when each row/selecteable element is clicked, set the selected state to true
+    // data-testid is for vitest
     <tr
       data-testid="table-row-select"
       onClick={() => {
@@ -48,6 +52,7 @@ export const ListTable = () => {
 
   return (
     <div className="listTable">
+      {/* single button that change the state of redux to false */}
       <button
         onClick={() => {
           dispatch(deselectItem())

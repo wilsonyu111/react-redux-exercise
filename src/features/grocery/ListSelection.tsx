@@ -15,6 +15,7 @@ interface ItemRowProps {
   item: Item
 }
 
+// show div is used for easier styling by creating each item into their own div
 export const ShowDiv = ({name, val}: any) => {
     return (<div className="list-view-section">
         <div style={{width:"90px", textAlign:"right", paddingRight:"10px"}}>{name}:</div> <div data-testid="table-row-select-val">{val}</div>

@@ -73,6 +73,7 @@ export const grocerySlice = createSlice({
     selectItem: (state, action: PayloadAction<number>) => {
       // Write a custom reducer that will select an item
       let item = state.list.find(i => i.id === action.payload)
+      // only set select to true when the item is found
       if (item !== null && item !== undefined){
         state.selectedItem = {
           id: item.id,
@@ -86,6 +87,7 @@ export const grocerySlice = createSlice({
     },
     deselectItem: (state) => {
       // Write a customer reducer that will deselect an item
+      // set select to false and initialize the selectedItem to "empty state"
       state.isItemSelected = false;
       state.selectedItem = {
         id: 0,

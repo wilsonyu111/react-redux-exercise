@@ -16,8 +16,8 @@ export const ListInputs: React.FC<ListInputsProps> = ({ addItem }) => {
     let d = new Date()
 
     const item: Item = {
-      // this was hardcoded to 10 but this will cause key issue
-      // so I change it to use epoch time
+      // this was hardcoded to 10 but this will cause unique key issue
+      // so I change it to use epoch time in milliseconds
       id: d.getTime(),
       name: "Roasted Turkey",
       category: "Deli",
